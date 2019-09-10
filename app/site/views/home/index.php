@@ -13,7 +13,17 @@ if (!defined('URL')){
 
     <!-- MAIN -->
     <div class="intro-section" id="home-section">
-      <div class="slide-1" style="background-image: url('<?=URL ?>assets/img/hero_1.jpg');" data-stellar-background-ratio="0.5">
+    <?php
+        $bg = "";
+        foreach ($this->dados['imagensHome'] as $imagensHome) {
+        extract($imagensHome);
+
+        if($id == 1){
+          $bg = $imagem;
+        }
+      }
+      ?>
+      <div class="slide-1" style="background-image: url(<?=URL. 'assets/img/' .$bg?>);" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12">
@@ -22,7 +32,7 @@ if (!defined('URL')){
                   <h1 data-aos="fade-up" data-aos-delay="100">Seja um membro desta comunidade!</h1>
                   <p class="mb-4" data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p data-aos="fade-up" data-aos-delay="300"><a href="./PerfilLavador/register.html"
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="<?= URL ?>registro/index"
                       onclick="document.getElementById('id01').style.display='block'"
                       class="btn btn-primary py-3 px-5 btn-pill">Registre-se</a></p>
                   </div>
@@ -59,7 +69,16 @@ if (!defined('URL')){
         </div>
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <img src="<?=URL ?>assets/img/hand_wash1.png" alt="Image" class="img-fluid">
+          <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+            extract($imagensHome);
+
+            if($id == 3){
+              $cfimg = $imagem;
+            }
+          }
+          ?>
+            <img src= "<?=URL. 'assets/img/'.$cfimg ?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-black mb-4">Sem tempo para lavar seu possante?</h2>
@@ -81,7 +100,16 @@ if (!defined('URL')){
         </div>
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="<?=URL ?>assets/img/world_drive.png" alt="Image" class="img-fluid">
+          <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+            extract($imagensHome);
+
+            if($id == 4){
+              $cfimg = $imagem;
+            }
+          }
+          ?>
+            <img src="<?=URL. 'assets/img/' .$cfimg?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-black mb-4">Lavando mundo a fora!</h2>
@@ -103,7 +131,16 @@ if (!defined('URL')){
         </div>
         <div class="row mb-5 align-items-center">
           <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <img src="<?=URL ?>assets/img/better_wash.png" alt="Image" class="img-fluid">
+          <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+            extract($imagensHome);
+
+            if($id == 5){
+              $cfimg = $imagem;
+            }
+          }
+          ?>
+            <img src="<?=URL. 'assets/img/' .$cfimg?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-black mb-4">Aderido pelos melhores profissionais</h2>
@@ -138,7 +175,16 @@ if (!defined('URL')){
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="teacher text-center">
-              <img src="<?=URL ?>assets/img/person_1.png" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+            <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+            extract($imagensHome);
+
+            if($id == 6){
+              $person = $imagem;
+            }
+          }
+          ?>
+              <img src="<?=URL. 'assets/img/' .$person ?>" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
               <div class="py-2">
                 <h3 class="text-black">Hinova Mais</h3>
                 <p class="position">Lava-Jato</p>
@@ -149,7 +195,15 @@ if (!defined('URL')){
           </div>
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="teacher text-center">
-              <img src="<?=URL ?>assets/img/person_2.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+            <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+              extract($imagensHome);
+            if($id == 7){
+              $person = $imagem;
+              }
+            }
+            ?>
+              <img src="<?=URL. 'assets/img/' .$person?>" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
               <div class="py-2">
                 <h3 class="text-black">KSB Car Wash</h3>
                 <p class="position">Lava-Jato</p>
@@ -160,7 +214,15 @@ if (!defined('URL')){
           </div>
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="teacher text-center">
-              <img src="<?=URL ?>assets/img/person_3.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+            <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+              extract($imagensHome);
+            if($id == 8){
+              $person = $imagem;
+              }
+            }
+            ?>
+              <img src="<?=URL. 'assets/img/' .$person?>" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
               <div class="py-2">
                 <h3 class="text-black">Cambona</h3>
                 <p class="position">Lava-Jato</p>
@@ -172,11 +234,30 @@ if (!defined('URL')){
         </div>
       </div>
     </div>
-    <div class="site-section bg-image overlay" style="background-image: url('<?=URL ?>assets/img/bg-parallax.jpg');">
+    <?php
+        $bg = "";
+        foreach ($this->dados['imagensHome'] as $imagensHome) {
+        extract($imagensHome);
+
+        if($id == 12){
+          $bg = $imagem;
+        }
+      }
+      ?>
+    <div class="site-section bg-image overlay" style="background-image: url(<?=URL. 'assets/img/' .$bg ?>)">
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-8 text-center testimony">
-            <img src="<?=URL ?>assets/img/person_4.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+          <?php
+            foreach ($this->dados['imagensHome'] as $imagensHome) {
+            extract($imagensHome);
+
+            if($id == 9){
+              $person = $imagem;
+            }
+          }
+          ?>
+            <img src="<?=URL. 'assets/img/' .$person?>" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
             <h3 class="mb-4">Jerome Jensen</h3>
             <blockquote>
               <p>&ldquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum rem soluta sit eius
@@ -190,16 +271,25 @@ if (!defined('URL')){
     <div class="site-section pb-0" id="aboutus-section">
       <div class="future-blobs">
         <div class="blob_2">
-          <img src="<?=URL ?>assets/img/water_splash1.png" alt="Image">
+          <?php
+              foreach ($this->dados['imagensHome'] as $imagensHome) {
+              extract($imagensHome);
+
+              if($id == 11){
+                $blob = $imagem;
+              }
+            }
+            ?>
+          <img src="<?=URL. 'assets/img/'.$blob?>" alt="Image">
         </div>
         <div class="blob_1">
-          <img src="<?=URL ?>assets/img/water_splash1.png" alt="Image">
+          <img src="<?=URL. 'assets/img/'.$blob?>" alt="Image">
         </div>
       </div>
       <div class="container">
         <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="">
           <div class="col-lg-7 text-center">
-            <h2 class="section-title">Sobre Nós</h2>
+            <h2 class="section-title">Sobre NÃ³s</h2>
           </div>
         </div>
         <div class="row">
@@ -250,7 +340,16 @@ if (!defined('URL')){
             </div>
           </div>
           <div class="col-lg-7 align-self-end" data-aos="fade-left" data-aos-delay="200">
-            <img src="<?=URL ?>assets/img/person_transparent.png" alt="Image" class="img-fluid">
+          <?php
+              foreach ($this->dados['imagensHome'] as $imagensHome) {
+              extract($imagensHome);
+
+              if($id == 10){
+                $person = $imagem;
+              }
+            }
+            ?>
+            <img src="<?=URL. 'assets/img/' .$person?>" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>

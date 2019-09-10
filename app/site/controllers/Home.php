@@ -19,9 +19,9 @@
 			$listarServico = new \Site\Models\Servico();
 			$this->dados['servicos'] = $listarServico->listar();
 			
-			// CHAMADA DO MODELS VÍDEO
-			$listarVideo = new \Site\Models\Video();
-			$this->dados['video'] = $listarVideo->listar();
+			// CHAMADA DO MODELS IMAGENS
+			$listarImagensHome = new \Site\Models\ImagensHome();
+			$this->dados['imagensHome'] = $listarImagensHome->listar();
 			
 			// CHAMADA DO MODELS NOTÍCIAS
 			$listarNoticia = new \Site\Models\Noticia();
