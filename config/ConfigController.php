@@ -35,8 +35,8 @@
 				$this->urlController = CONTROLLER;
 				$this->urlMetodo = METHOD;
 			}
-			//echo "Controller: " .$this->urlController."<br/>Método: " .$this->urlMetodo
-				//."<br/>Parâmetro: " .$this->urlParametro;
+			// echo "Controller: " .$this->urlController."<br/>Método: " .$this->urlMetodo
+			// 	."<br/>Parâmetro: " .$this->urlParametro;
 		}
 		
 		public function carregar(){
@@ -59,7 +59,7 @@
             $this->url = strtr(utf8_decode($this->url), utf8_decode(self::$formato['a']), self::$formato['b']);
 		}
 		
-		public function prepararController($urlController){
+		public function prepareController($urlController){
 			//$urlController = strtolower($urlController);
 			//$urlController = explode("-", $urlController);
 			//$urlController = implode(" ", $urlController);

@@ -11,10 +11,13 @@
 		private $dados;
 	
 		public function index(){
-			echo "<br/>Carregando o controller da página Registro";
-			$carregarView = new \Config\ConfigView("registro/index", $this->dados);
-			$carregarView->renderizar();
+			//echo "<br/>Carregando o controller da página Registro";
 
-			exit();
+			// CHAMADA DO MODELS IMAGENS
+			$listarImagensHome = new \Site\Models\ImagensHome();
+			$this->dados['imagensHome'] = $listarImagensHome->listar();
+
+			$carregarView = new \Config\ConfigView("registro/index", $this->dados);
+			$carregarView->renderizar2();
 		}
 	}

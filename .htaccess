@@ -9,5 +9,5 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 # expressao regular para pegar tudo após o index.php
 # e anoexar à query URL. Encerrar o .htaccess
-RewriteRULE ^(.+)$ index.php?url=$l [QSA,L]
+RewriteRULE ^(.+)$ index.php?url=$1 [QSA,L]
 Options -Indexes

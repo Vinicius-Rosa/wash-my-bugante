@@ -31,16 +31,26 @@ if (!defined('URL')){
   <div class="container">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
+      <div class="card-body">
         <!-- Nested Row within Card Body -->
         <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+        <?php
+          $bg = "";
+          foreach ($this->dados['imagensHome'] as $imagensHome) {
+          extract($imagensHome);
+
+          if($id == 13){
+            $bg = $imagem;
+          }
+        }
+        ?>
+          <div class="col-lg-5 d-none d-lg-block" style="background-image: url(<?=URL. 'assets/img/' .$bg ?>); background-repeat: no-repeat"></div>
           <div class="col-lg-7">
-            <div class="p-5">
+            <div class="p-3">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Crie uma Conta!</h1>
               </div>
-              <div class="p-5 bg-white rounded shadow mb-5">
+              <div class="p-3 bg-white rounded shadow mb-5">
                   <!-- Rounded tabs -->
                   <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-light border-0 rounded-nav">
                     <li class="nav-item flex-sm-fill">
@@ -86,7 +96,6 @@ if (!defined('URL')){
                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                   Registrar
                 </a>
-                <br /><br />
               </form>
             </div>
           </div>

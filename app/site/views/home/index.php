@@ -32,7 +32,7 @@ if (!defined('URL')){
                   <h1 data-aos="fade-up" data-aos-delay="100">Seja um membro desta comunidade!</h1>
                   <p class="mb-4" data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p data-aos="fade-up" data-aos-delay="300"><a href="<?= URL ?>registro/index"
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="<?= URL; ?>registro/index"
                       onclick="document.getElementById('id01').style.display='block'"
                       class="btn btn-primary py-3 px-5 btn-pill">Registre-se</a></p>
                   </div>
