@@ -35,14 +35,14 @@ if (!defined('URL')){
 
   <!-- Nav Item - Chats -->
   <li class="nav-item">
-    <a class="nav-link" href="blank.html">
+    <a class="nav-link" href="<?=URL ?>mensagem/index.html">
       <i class="fas fa-envelope-open-text"></i>
       <span>Mensagens</span></a>
   </li>
 
   <!-- Nav Item - Notify -->
   <li class="nav-item">
-    <a class="nav-link" href="./blank1.html">
+    <a class="nav-link" href="<?=URL ?>notificacoes/index.html">
       <i class="fas fa-bell"></i>
       <span>Notificações</span></a>
   </li>
